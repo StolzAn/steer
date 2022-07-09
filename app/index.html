@@ -1,53 +1,119 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
-
-	<meta charset="utf-8">
-
-	<title>Title</title>
-	<meta name="description" content="">
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
-
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#000">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#000">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
-
-	<link rel="stylesheet" href="css/main.min.css">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
 </head>
 
 <body>
-
-	<div class="container">
-
-		<div class="row">
-
-			<div class="col-sm-8 col-sm-offset-2">
-				
-				<img class="img-responsive" src="img/preview.jpg" alt="Start HTML5 Template">
-				<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Пустился снова, силуэт сих снова не коварный за языкового текста до рекламных, агенство возвращайся, буквенных жизни это, первую переулка правилами?</p>
-				<p>Наш, приставка страна единственное большой, власти, злых, взобравшись семь рот он алфавит осталось вершину курсивных сих всемогущая буквенных предупредила залетают необходимыми эта но вдали имеет ты? Предупреждал повстречался, но которое!</p>
-				<p>Злых, знаках свою. Выйти по всей рукописи запятой дороге маленький дорогу, все вопроса переулка необходимыми точках повстречался текстов наш приставка одна над страна последний, за имеет ты всемогущая предложения рот скатился.</p>
-
-			</div>
-			
-		</div>
-
-	</div>
-
-	<script src="js/scripts.min.js"></script>
-
+    <div class="offer-notice">
+        Спецпредложение: купи авто по цене и получи дубликаты госномеров в подарок!
+        <div>
+            <a class="offer__btn" href="#close"></a>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__top">
+            <div class="header__top-content">
+                <div class="container">
+                    <div class="header__top-content-inner">
+                        <div class="header__site-info">
+                            <div class="header__logo logo">
+                               <a href="#"> <img src="img/logo.svg" alt="logo"></a>
+                            </div>
+                            <div class="header__site-desc">
+                                Аренда автомобилей с&nbsp;выкупом №1 на Юге России
+                                <span>Выгодные и честные условия</span>
+                            </div>
+                        </div>
+                        <div class="header__сity-info makhachkala" id="makhachkala">
+                            <div class="city-name">
+                                <span>Махачкала, ул. Махачкалинская, 2</span>
+                                <button class="city__select" data-toggle="modal" type="button">Выбрать город</button>
+                            </div>
+                            <div class="city__phone-number">
+                                <a href="tel:89624955554" class="tel">8 (962) 495-55-54</a>
+                                <a href="#">Заказать звонок</a>
+                            </div>
+                        </div>
+                        <div class="header__сity-info" id="stavropol">
+                            <div class="city-name stavropol">
+                                <span>Ставрополь ул. Доваторцев, 21</span>
+                                <button class="city__select" data-toggle="modal" type="button">Выбрать город</button>
+                            </div>
+                            <div class="city__phone-number">
+                                <a href="tel:89678005540" class="tel">8 (967) 800-55-40</a>
+                                <a href="#">Заказать звонок</a>
+                            </div>
+                        </div>
+                        <div class="header__сity-info" id="rostov-on-don">
+                            <div class="city-name">
+                                <span>Ростов-на-Дону, ул. Лорем, 17</span>
+                                <button class="city__select" data-toggle="modal" type="button">Выбрать город</button>
+                            </div>
+                            <div class="city__phone-number">
+                                <a href="tel:89600000254" class="tel">8 (960) 000-02-54</a>
+                                <a href="#">Заказать звонок</a>
+                            </div>
+                        </div>
+                        <div class="header__сity-info" id="krasnodar">
+                            <div class="city-name">
+                                <span>Краснодар, ул. Ипсум, 12</span>
+                                <button class="city__select" data-toggle="modal" type="button">Выбрать город</button>
+                            </div>
+                            <div class="city__phone-number">
+                                <a href="tel:87777777777" class="tel">8 (777) 777-77-77</a>
+                                <a href="#">Заказать звонок</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="header__nav">
+                <div class="container">
+                   <div class="header__nav-inner">
+                        <ul class="header__menu-list">
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">
+                                    Каталог автомобилей
+                                </a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">
+                                    Варианты покупки
+                                </a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">Дубликаты госномеров</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">Истории выкупа</a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">
+                                    Дубликаты госномеров
+                                </a>
+                            </li>
+                            <li class="header__menu-item">
+                                <a href="#" class="header__menu-link">Контакты</a>
+                            </li>
+                        </ul>
+                        <div class="header__user-area">
+                            <a href="#" class="header__user-link">Личный кабинет</a>
+                        </div>
+                    </div>
+                   </div>
+            </nav>
+        </div>
+        <ul class="city__list"><li class="city__list-item"><a class="stavropol" href="#">Ставрополь</a></li><li class="city__list-item"><a class="krasnodar" href="#">Краснодар</a></li><li class="city__list-item"><a class="makhachkala" href="#">Махачкала</a></li><li class="city__list-item"><a class="rostov-on-don" href="#">Ростов-на-Дону</a></li></ul>
+        <div class="header__body"></div>
+    </header>
+    <button id="show-modal" class="btn">Открыть</button>
+    <script src="js/scripts.min.js"></script>
 </body>
+
 </html>

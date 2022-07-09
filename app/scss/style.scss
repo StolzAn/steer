@@ -1,9 +1,164 @@
 @import "reset";
-/* ********************** */ 
+/* ********************** */
+@import "modal";
+/* ********************** */
 @import "fonts";
 @import "vars";
-/* ********************** */ 
-
-
-/* ********************** */ 
+/* ********************** */
+@import "global";
+/* ********************** */
+.offer-notice {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 14px;
+    color: $stress-color;
+    background: $default-color;
+    font-weight: 500;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 16px;
+}
+.offer__btn::before {
+    content: "";
+    display: block;
+    width: 11px;
+    height: 11px;
+    background: url("../img/icons/cross.svg") center center/ cover no-repeat;
+    margin-left: 27px;
+}
+/* ********************** */
+.header__top {
+    padding-top: 40px;
+    &-content{
+        margin-bottom: 10px;
+    }
+    &-content-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+.header__site-info {
+    display: flex;
+    align-items: center;
+}
+.header__logo {
+    margin-right: 16px;
+}
+.header__site-desc {
+    font-weight: 700;
+    line-height: 138%;
+    max-width: 240px;
+    span {
+        display: block;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 186%;
+        color: $light-color;
+    }
+}
+.header__сity-info {
+    align-items: center;
+    justify-content: start;
+}
+.city-name {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 186%;
+    margin-right: 25px;
+    span {
+        display: flex;
+        align-items: flex-end;
+    }
+    span::before {
+        content: "";
+        display: block;
+        width: 28px;
+        height: 28px;
+        margin-right: 5px;
+        background: url(../img/icons/pin.svg);
+    }
+    button {
+        background: transparent;
+        text-decoration: underline;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 186%;
+        color: $light-color;
+        display: block;
+        margin-left: 32px;
+    }
+}
+.city__phone-number {
+    a {
+        text-decoration: underline;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 186%;
+        color: $light-color;
+        display: block;
+        margin-left: 32px;
+    }
+    .tel {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 130%;
+        margin-left: 0;
+        text-decoration: none;
+        color: $default-color;
+        display: flex;
+        align-items: center;
+    }
+    .tel::before {
+        content: "";
+        width: 28px;
+        height: 28px;
+        display: block;
+        margin-right: 5px;
+        background: url(../img/icons/tel.svg) center center/cover no-repeat;
+    }
+}
+.city__list-item {
+    margin: 10px 0;
+}
+.city__list-item a {
+    display: inline-block;
+    padding: 5px 0;
+}
+.header__nav {
+    background: #f5f5f9;
+}
+.header__nav-inner {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: $default-color;
+    padding: 20px 0;
+}
+.header__menu-list {
+    display: flex;
+    align-items: center;
+    li {
+        margin-right: 40px;
+        
+    }
+    li:last-child {
+        margin-right: 30px;
+    }
+    a{
+        transition: all .3s;
+    }
+    a:hover{
+        color: $accent
+    }
+}
+/* ********************** */
 @import "media";
