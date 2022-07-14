@@ -1,10 +1,11 @@
 $(function () {
 	$('.header__top-content').find('.header__сity-info').css('display', 'none');
+	$('.footer__city-select').find('.footer__city-info').css('display', 'none');
 	if (localStorage.getItem("myKey")) {
 		var stored_select = localStorage.getItem("myKey");
-		$('#' + stored_select).css('display', 'flex');
+		$('.' + stored_select).css('display', 'flex');
 	} else {
-		$('#stavropol').css('display', 'flex');
+		$('.stavropol').css('display', 'flex');
 	};
 	if (localStorage.getItem("vhod")) {
 		$('.offer-notice').css("display", "none")
@@ -26,8 +27,9 @@ $(function () {
 		var selected = e.target.className;
 		modal.hide();
 		$('.header__top-content').find('.header__сity-info').css('display', 'none');
+		$('.footer__city-select').find('.footer__city-info').css('display', 'none');
 		localStorage.setItem("myKey", selected);
-		$('#' + selected).css('display', 'flex');
+		$('.' + selected).css('display', 'flex');
 	});
 	$('.offer-notice a').on('click', function(e){
 		e.preventDefault();
