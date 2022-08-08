@@ -1,0 +1,38 @@
+body,
+html {
+    font-family: $default-font;
+    color: $default-color;
+    font-size: 16px;
+}
+.container {
+    max-width: 1260px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.button {
+    display: block;
+    text-align: center;
+    background: $accent;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    padding: 19px 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+.heading{
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 45px;
+}
+.header__top--mobile{
+    display: none;
+}
+.burger-inner{
+    transition: all .3s;
+    transform: translateX(120%);
+    width: 10px;
+    height: 0;
+}
