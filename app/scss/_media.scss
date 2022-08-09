@@ -19,6 +19,7 @@
         display: none;
     }
     .burger{
+        cursor: pointer;
         display: block;
     }
     .burger::before{
@@ -29,12 +30,6 @@
             background: url(../img/icons/burger.svg)center center/ contain no-repeat;
     }
     .burger--active{
-        .burger-inner{
-            transform: translateX(0);
-        }
-        &::before{
-            content: none;
-        }
     }
     .header__nav-inner{
         display: flex;

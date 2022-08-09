@@ -41,10 +41,16 @@ $(function () {
 		$('.offer-notice').css("display", "none")
 		localStorage.setItem("vhod", 'ok');
 	})
+	// $('.burger').on('click', function (e) {
+	// 	e.preventDefault()
+	// 	$(this).toggleClass('burger--active')
+	// });
 	$('.burger').on('click', function (e) {
 		e.preventDefault()
-		$(this).toggleClass('burger--active')
-	});
+		$('.burger').toggleClass('burger--active');
+		$('.burger-menu').toggleClass('burger-menu--open');
+		$('.overlay').toggleClass('overlay--show');
+	  });
 
 	if (matchMedia) {
 		var screen = window.matchMedia('(max-width:900px)');

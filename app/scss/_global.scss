@@ -30,11 +30,9 @@ html {
 .header__top--mobile {
     display: none;
 }
-.burger-inner {
+.burger-menu{
     transition: all 0.3s;
     transform: translateX(120%);
-    width: 10px;
-    height: 0;
 }
 .catalog__dots .slick-dots {
     display: flex;
