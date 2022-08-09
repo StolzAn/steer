@@ -33,6 +33,7 @@ function browsersync() {
 function js() {
 	return src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/js/slick.min.js',
 		'app/js/modal.js',
 		'app/js/main.js', // Всегда в конце
 		])

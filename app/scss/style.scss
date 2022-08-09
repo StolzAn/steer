@@ -1,6 +1,7 @@
 @import "reset";
 /* ********************** */
 @import "modal";
+@import "slick";
 /* ********************** */
 @import "fonts";
 @import "vars";
@@ -261,15 +262,17 @@
         background: url(../img/icons/login.svg) center center/ cover no-repeat;
     }
 }
-.header__body{
+.header__body {
     position: relative;
-    padding-bottom: 150px;
+    background: url(../img/bgcar.jpg) 100% 100%/35% no-repeat;
+    padding-bottom: 350px;
 }
-.header__body-img{
+.header__body-inner {
+}
+.header__body-img {
     position: absolute;
-    top: -150px;
+    top: 150px;
     right: 0;
-    z-index: -1;
 }
 // .header__body {
 //     background: url(../img/header-bg.jpg) 100% 100% no-repeat;
@@ -286,6 +289,11 @@
     margin-bottom: 20px;
     span {
         color: $accent;
+        white-space: nowrap;
+    }
+    span.header__body-city{
+        color: $default-color;
+        white-space: normal;
     }
 }
 .header__body-desc {
@@ -486,11 +494,14 @@
         font-weight: 900;
     }
     &__list {
-        display: flex;
-        justify-content: space-between;
+        // display: flex;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 30px;
     }
     &__item {
-        width: 385px;
+        // width: 385px;
         height: 125px;
         font-weight: 700;
         font-size: 24px;
@@ -499,7 +510,17 @@
         padding-left: 125px;
         align-items: center;
         position: relative;
-        background: url(../img/benefits-bg.jpg);
+        background: #242321;
+        border-radius: 5px;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0%;
+            right: 0;
+            width: 38px;
+            height: 68px;
+            background: url(../img/П.svg);
+        }
         span {
             position: absolute;
             left: -35px;

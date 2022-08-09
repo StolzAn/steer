@@ -1,11 +1,14 @@
 $(function () {
 	$('.header__top-content').find('.header__сity-info').css('display', 'none');
 	$('.footer__city-select').find('.footer__city-info').css('display', 'none');
+	$('.header__title').find('.header__body-city').css('display', 'none');
 	if (localStorage.getItem("myKey")) {
 		var stored_select = localStorage.getItem("myKey");
 		$('.' + stored_select).css('display', 'flex');
+		$('span.' + stored_select).css('display', 'inline');
 	} else {
 		$('.stavropol').css('display', 'flex');
+		$('span.stavropol').css('display', 'inline');
 	};
 	if (localStorage.getItem("vhod")) {
 		$('.offer-notice').css("display", "none")
@@ -28,10 +31,12 @@ $(function () {
 		modal.hide();
 		$('.header__top-content').find('.header__сity-info').css('display', 'none');
 		$('.footer__city-select').find('.footer__city-info').css('display', 'none');
+		$('.header__title').find('.header__body-city').css('display', 'none');
 		localStorage.setItem("myKey", selected);
 		$('.' + selected).css('display', 'flex');
+		$('span.' + selected).css('display', 'inline');
 	});
-	$('.offer-notice a').on('click', function(e){
+	$('.offer-notice a').on('click', function (e) {
 		e.preventDefault();
 		$('.offer-notice').css("display", "none")
 		localStorage.setItem("vhod", 'ok');
@@ -40,4 +45,53 @@ $(function () {
 		e.preventDefault()
 		$(this).toggleClass('burger--active')
 	});
+
+	if (matchMedia) {
+		var screen = window.matchMedia('(max-width:900px)');
+		screen.addListener(changes);
+		changes(screen);
+	}
+	function changes(screen) {
+		if (screen.matches) {
+			$('.catalog__list--mileage').slick({
+				arrows: false,
+				slidesToShow: 2,
+				dots: true,
+				appendDots: $('.catalog__dots--mileage'),
+				centerMode: true,
+				responsive: [
+					{
+					  breakpoint: 768,
+					  settings: {
+						slidesToShow: 1,
+						centerMode: false
+					  }
+					}
+				]
+				// dots: true,
+			});
+			$('.catalog__list--without').slick({
+				arrows: false,
+				slidesToShow: 2,
+				dots: true,
+				appendDots: $('.catalog__dots--without'),
+				centerMode: true,
+				responsive: [
+					{
+					  breakpoint: 768,
+					  settings: {
+						slidesToShow: 1,
+						centerMode: false
+					  }
+					}
+				]
+				// dots: true,
+			});
+		}
+	}
+	// $('.catalog__list').slick({
+	// 	arrows: false,
+	// 	centerMode: true,
+	// 	dots: true,
+	// });
 });

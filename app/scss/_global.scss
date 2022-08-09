@@ -22,17 +22,56 @@ html {
     border-radius: 5px;
     width: 100%;
 }
-.heading{
+.heading {
     font-weight: 900;
     font-size: 30px;
     line-height: 45px;
 }
-.header__top--mobile{
+.header__top--mobile {
     display: none;
 }
-.burger-inner{
-    transition: all .3s;
+.burger-inner {
+    transition: all 0.3s;
     transform: translateX(120%);
     width: 10px;
     height: 0;
+}
+.catalog__dots .slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catalog__dots li {
+    margin-right: 12px;
+}
+
+.catalog__dots li:last-child {
+    margin-right: 0;
+}
+
+.catalog__dots button {
+    font-size: 0;
+    line-height: 0;
+    background: transparent;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.catalog__dots button::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #E5E5E5;
+    bottom: 0;
+    left: 0;
+}
+.catalog__dots .slick-active button::before {
+    background: #0088CF;
+    width: 18px;
+    height: 18px;
 }
