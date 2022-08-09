@@ -2,6 +2,7 @@ $(function () {
 	$('.header__top-content').find('.header__сity-info').css('display', 'none');
 	$('.footer__city-select').find('.footer__city-info').css('display', 'none');
 	$('.header__title').find('.header__body-city').css('display', 'none');
+	$('.header__nav-inner').find('.header__сity-info').css('display', 'none');
 	if (localStorage.getItem("myKey")) {
 		var stored_select = localStorage.getItem("myKey");
 		$('.' + stored_select).css('display', 'flex');
@@ -32,6 +33,7 @@ $(function () {
 		$('.header__top-content').find('.header__сity-info').css('display', 'none');
 		$('.footer__city-select').find('.footer__city-info').css('display', 'none');
 		$('.header__title').find('.header__body-city').css('display', 'none');
+		$('.header__nav-inner').find('.header__сity-info').css('display', 'none');
 		localStorage.setItem("myKey", selected);
 		$('.' + selected).css('display', 'flex');
 		$('span.' + selected).css('display', 'inline');
