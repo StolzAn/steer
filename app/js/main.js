@@ -47,12 +47,13 @@ $(function () {
 	// 	e.preventDefault()
 	// 	$(this).toggleClass('burger--active')
 	// });
-	$('.burger').on('click', function (e) {
+	$('.burger, .burger-close').on('click', function (e) {
 		e.preventDefault()
 		$('.burger').toggleClass('burger--active');
 		$('.burger-menu').toggleClass('burger-menu--open');
 		$('.overlay').toggleClass('overlay--show');
 	  });
+	  
 
 	if (matchMedia) {
 		var screen = window.matchMedia('(max-width:900px)');

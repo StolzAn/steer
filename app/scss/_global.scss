@@ -9,6 +9,28 @@ html {
     padding: 0 15px;
     margin: 0 auto;
 }
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(0, 0, 0, 0.5);
+    z-index: 20;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay--show {
+    opacity: 1;
+    visibility: visible;
+}
 .button {
     display: block;
     text-align: center;
@@ -32,6 +54,10 @@ html {
 }
 .burger-menu{
     transition: all 0.3s;
+    transform: translateX(500px);
+}
+.burger-menu--open{
+    transform: translateX(0);
 }
 .catalog__dots .slick-dots {
     display: flex;
