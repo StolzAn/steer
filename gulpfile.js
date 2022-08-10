@@ -67,7 +67,7 @@ async function clearcache() { cache.clearAll() }
 function buildcopy() {
 	return src([
 		'app/*.html',
-		'app/.htaccess',
+		// 'app/.htaccess',
 		'{app/js,app/css}/*.min.*',
 		'app/fonts/**/*'
 	], { base: 'app/' })

@@ -264,15 +264,29 @@
 }
 .header__body {
     position: relative;
-    background: url(../img/bgcar.jpg) 100% 100%/35% no-repeat;
-    padding-bottom: 350px;
+    padding-bottom: 120px;
 }
 .header__body-inner {
+    display: flex;
 }
 .header__body-img {
+    padding-bottom: 350px;
     position: absolute;
-    top: 150px;
     right: 0;
+}
+.header__body-img img {
+    width: 50vw;
+    min-width: 300px;
+}
+.header__body-img::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    display: block;
+    width: 32vw;
+    height: 75vh;
+    background: url(../img/bgcar.jpg) 100% 100%/cover no-repeat;
 }
 // .header__body {
 //     background: url(../img/header-bg.jpg) 100% 100% no-repeat;

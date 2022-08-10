@@ -6,17 +6,22 @@
             padding: 19px 5px;
         }
     }
+    .header__body-content {
+        max-width: 570px;
+    }
     .header__body-img {
-        width: 70%;
     }
-    .header__nav-inner {
-        justify-content: center;
-    }
+}
+.header__nav-inner {
+    justify-content: center;
 }
 /* ********************** */
 @media (max-width: 1100px) {
     .header__top {
         display: none;
+    }
+    .header__body-content {
+        max-width: 750px;
     }
     .header__user-area--mobile {
         padding-left: 18px;
@@ -31,7 +36,7 @@
         position: relative;
         padding-bottom: 10px;
     }
-    .header__menu-list li:last-child{
+    .header__menu-list li:last-child {
         margin-right: 0;
     }
     .header__menu-list:after {
@@ -44,13 +49,13 @@
         left: 50%;
         transform: translateX(-50%);
     }
-    .header__menu-list{
+    .header__menu-list {
         margin-right: 0;
     }
     li.header__menu-item {
         margin-right: 0;
     }
-    
+
     .city__name span::before {
         margin-left: -2px;
         margin-right: 6px;
@@ -82,13 +87,13 @@
         padding: 60px 10px 0;
         box-shadow: 0px 5px 15px rgba(0, 136, 207, 0.11);
     }
-    .burger-close{
+    .burger-close {
         position: absolute;
         top: 25px;
         left: 25px;
         cursor: pointer;
     }
-    .burger-close::before{
+    .burger-close::before {
         content: "";
         display: block;
         width: 18px;
@@ -151,7 +156,7 @@
                 text-align: left;
             }
         }
-        .header__top-content{
+        .header__top-content {
             padding-left: 15px;
         }
     }
@@ -180,6 +185,23 @@
             }
         }
     } /********************************/
+    .header__body-inner {
+        display: block;
+    }
+    .header__body-img {
+        position: static;
+        padding-bottom: 0;
+    }
+    .header__body-img img {
+        margin-top: 60px;
+        width: 100%;
+    }
+    .header__body-img:before {
+        height: 70%;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+    }
     .steps__list {
         grid-template: auto/220px 220px 220px 1fr;
     }
@@ -199,6 +221,11 @@
     }
     .step__number:after {
         width: 100px;
+    }
+}
+@media (max-width: 1000px) {
+    .header__body-img:before {
+        height: 60%;
     }
 }
 @media (max-width: 900px) {
@@ -223,6 +250,10 @@
     }
 }
 @media (max-width: 768px) {
+    .header__body-img:before {
+        height: 70%;
+        width: 55%;
+    }
     .we-right__list {
         grid-template: repeat(5, auto) / 1fr;
     }
@@ -290,12 +321,16 @@
     }
 }
 @media (max-width: 650px) {
-    .header__logo img{
+    .header__body-img:before {
+        height: 60%;
+        width: 65%;
+    }
+    .header__logo img {
         width: 95px;
     }
-    .header__site-desc{
+    .header__site-desc {
         font-size: 11px;
-        span{
+        span {
             font-size: 11px;
         }
     }
@@ -335,7 +370,7 @@
         flex-direction: column;
     }
 }
-@media(max-width: 480px){
+@media (max-width: 480px) {
     // .header__menu-list{
     //     align-items: center;
     // }
@@ -343,33 +378,46 @@
     //     display: flex;
     //     align-items: center;
     // }
-    .header__menu-list{
+    .header__body-img:before {
+        height: 50%;
+        width: 65%;
+    }
+    .header__menu-list {
         width: 100%;
     }
-    .header__menu-list::after{
+    .header__menu-list::after {
         width: 95%;
     }
 
-    .header__menu-item{
+    .header__menu-item {
         width: 100%;
     }
-    .header__menu-item a, .header__user-area--mobile, .city-name span{
+    .header__menu-item a,
+    .header__user-area--mobile,
+    .city-name span {
         font-size: 18px;
     }
-    .city-name,.header__user-area--mobile{
+    .city-name,
+    .header__user-area--mobile {
         margin-bottom: 12px;
     }
-    .burger-menu__inner{
+    .burger-menu__inner {
         display: flex;
         flex-direction: column;
         align-items: start;
     }
-    .burger-menu{
+    .burger-menu {
         width: 100%;
     }
 }
-@media(max-width: 360px){
-    .header__menu-item a, .header__user-area--mobile, .city-name span{
-       font-size: 14px;
+@media (max-width: 360px) {
+    .header__menu-item a,
+    .header__user-area--mobile,
+    .city-name span {
+        font-size: 14px;
+    }
+    .header__body-img:before {
+        height: 40%;
+        width: 65%;
     }
 }
